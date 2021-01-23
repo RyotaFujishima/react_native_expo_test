@@ -1,6 +1,14 @@
-import React from 'react'
+import React, { FC } from 'react'
 import { View, Text, TouchableOpacity, StyleSheet } from 'react-native'
 import { Actions } from 'react-native-router-flux'
+
+const PageB: FC = () => (
+  <View style={styles.container}>
+    <TouchableOpacity onPress={Actions.pageC}>
+      <Text style={styles.linkText}>Link</Text>
+    </TouchableOpacity>
+  </View>
+)
 
 const styles = StyleSheet.create({
   container: {
@@ -14,11 +22,4 @@ const styles = StyleSheet.create({
   },
 })
 
-const PageB = () => (
-  <View style={styles.container}>
-    <TouchableOpacity onPress={Actions.pageC}>
-      <Text style={styles.linkText}>Link</Text>
-    </TouchableOpacity>
-  </View>
-)
 export default PageB

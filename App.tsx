@@ -1,20 +1,20 @@
+import React, { FC } from 'react'
+import { StyleSheet, Text, View, Image, Button } from 'react-native'
+import { Router, Actions } from 'react-native-router-flux'
 import { StatusBar } from 'expo-status-bar'
-import React from 'react'
-import { StyleSheet, Text, View, Image } from 'react-native'
 
-export default function App() {
-  return (
-    <View style={styles.container}>
-      <Text style={styles.h1}>App.tsx</Text>
-      <Text>Hello! React Native!</Text>
-      <Image
-        style={{ width: 300, height: 300 }}
-        source={require('./assets/logo.png')}
-      />
-      <StatusBar style="auto" />
-    </View>
-  )
-}
+const App: FC = () => (
+  <View style={styles.container}>
+    <Text style={styles.h1}>App.tsx</Text>
+    <Button
+      onPress={this.onPressLearnMore}
+      title="Learn More"
+      color="#841584"
+      accessibilityLabel="Learn more about this purple button"
+    />
+    <StatusBar style="auto" />
+  </View>
+)
 
 const styles = StyleSheet.create({
   container: {
@@ -24,6 +24,8 @@ const styles = StyleSheet.create({
     justifyContent: 'center',
   },
   h1: {
-    fontSize: 32,
+    fontSize: 30,
   },
 })
+
+export default App
