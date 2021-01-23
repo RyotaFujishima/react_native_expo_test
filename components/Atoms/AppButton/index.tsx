@@ -1,7 +1,12 @@
-import React, { FC, Component } from 'react'
+import React, { FC } from 'react'
+import { View, Text } from 'react-native'
 
 const AppButton: FC = () => {
-  return <div>これはボタンです。</div>
+  return (
+    <View>
+      <Text>これはボタンです。</Text>
+    </View>
+  )
 }
 
 export default AppButton
