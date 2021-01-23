@@ -1,12 +1,11 @@
 import React, { FC } from 'react'
-import { View, Text, TouchableOpacity, StyleSheet } from 'react-native'
+import { View, Text, Button, StyleSheet } from 'react-native'
 import { Actions } from 'react-native-router-flux'
 
 const PageB: FC = () => (
   <View style={styles.container}>
-    <TouchableOpacity onPress={Actions.pageC}>
-      <Text style={styles.linkText}>Link</Text>
-    </TouchableOpacity>
+    <Text style={styles.text}>PageB</Text>
+    <Button onPress={Actions.pageC} title="PageCへ" color="#841584" />
   </View>
 )
 
@@ -16,9 +15,8 @@ const styles = StyleSheet.create({
     justifyContent: 'center',
     alignItems: 'center',
   },
-  linkText: {
+  text: {
     fontSize: 32,
-    color: 'rgb(95, 177, 237)',
   },
 })
 
