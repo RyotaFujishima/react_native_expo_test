@@ -1,17 +1,21 @@
 import React, { FC } from 'react'
-import { View, Text, Button, StyleSheet } from 'react-native'
+import { View, StyleSheet } from 'react-native'
 import { Actions, ActionConst } from 'react-native-router-flux'
+import { Button, Text } from '@ui-kitten/components'
 
 const PageC: FC = () => (
   <View style={styles.container}>
-    <Text style={styles.text}>PageC</Text>
+    <Text style={styles.text}>ページC</Text>
     <Button
+      style={styles.button}
       onPress={() => {
         Actions.pageA({ type: ActionConst.RESET })
       }}
-      title="PageAへ"
-      color="#841584"
-    />
+      appearance="ghost"
+      status="warning"
+    >
+      PageAへ
+    </Button>
   </View>
 )
 
@@ -23,6 +27,9 @@ const styles = StyleSheet.create({
   },
   text: {
     fontSize: 32,
+  },
+  button: {
+    marginTop: 32,
   },
 })
 

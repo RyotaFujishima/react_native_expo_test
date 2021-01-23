@@ -1,13 +1,23 @@
 import React, { FC } from 'react'
-import { View, Text, Button, StyleSheet } from 'react-native'
+import { View, StyleSheet } from 'react-native'
 import { Actions } from 'react-native-router-flux'
+import { Button, Text } from '@ui-kitten/components'
 
-const PageB: FC = () => (
-  <View style={styles.container}>
-    <Text style={styles.text}>PageB</Text>
-    <Button onPress={Actions.pageC} title="PageCへ" color="#841584" />
-  </View>
-)
+const PageB: FC = () => {
+  return (
+    <View style={styles.container}>
+      <Text style={styles.text}>ページB</Text>
+      <Button
+        style={styles.button}
+        onPress={Actions.pageC}
+        appearance="outline"
+        status="success"
+      >
+        PageCへ
+      </Button>
+    </View>
+  )
+}
 
 const styles = StyleSheet.create({
   container: {
@@ -17,6 +27,9 @@ const styles = StyleSheet.create({
   },
   text: {
     fontSize: 32,
+  },
+  button: {
+    marginTop: 32,
   },
 })
 
