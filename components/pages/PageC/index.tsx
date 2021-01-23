@@ -1,16 +1,17 @@
 import React, { FC } from 'react'
-import { View, Text, TouchableOpacity, StyleSheet } from 'react-native'
+import { View, Text, Button, StyleSheet } from 'react-native'
 import { Actions, ActionConst } from 'react-native-router-flux'
 
 const PageC: FC = () => (
   <View style={styles.container}>
-    <TouchableOpacity
+    <Text style={styles.text}>PageC</Text>
+    <Button
       onPress={() => {
-        Actions.pageA({ type: ActionConst.REFRESH })
+        Actions.pageA({ type: ActionConst.RESET })
       }}
-    >
-      <Text style={styles.linkText}>Home</Text>
-    </TouchableOpacity>
+      title="PageAへ"
+      color="#841584"
+    />
   </View>
 )
 
@@ -20,9 +21,8 @@ const styles = StyleSheet.create({
     justifyContent: 'center',
     alignItems: 'center',
   },
-  linkText: {
+  text: {
     fontSize: 32,
-    color: 'rgb(95, 177, 237)',
   },
 })
 
